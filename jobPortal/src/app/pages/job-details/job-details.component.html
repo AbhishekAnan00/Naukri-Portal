@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="header">
+      <div>
+          <h1>{{jobObj.JobName}}</h1>
+          <p><strong>{{jobObj.companyName}}</strong> | {{jobObj.categoryName}} | {{jobObj.Package}}</p>
+          <p>📍 {{jobObj.location}}</p>
+          <p>Posted: 3 days ago | Openings: 10 | Applicants: 42</p>
+      </div>
+      <a href="#" class="apply-button" *ngIf="isLoggedIn" (click)="apply()">Apply</a>
+      <a href="#" *ngIf="!isLoggedIn" class="apply-button" routerLink="/jobs" routerLinkActive="active">Login To Apply</a>
+  </div>
+  <div class="job-highlights">
+      <h2>Job highlights</h2>
+      <ul>
+          <li>Requirements: College graduate Any Stream</li>
+          <li>Interested candidates must have an ingenious, scientific approach to problems, backed by a strong outcome-oriented point of view</li>
+          <li>Key Responsibilities Include: Ensuring that procured cars match Spinny's required quality standards</li>
+          <li>Securing required documentation from the sellers, facilitating a smooth procurement process</li>
+      </ul>
+  </div>
+  <div class="job-description">
+      <h2>Job description</h2>
+      <p>{{jobObj.JobDescription}}</p>
+      <h3>Key Responsibilities Include:</h3>
+      <ul>
+          <li>Ensuring that procured cars match Spinny's required quality standards</li>
+          <li>Securing required documentation from the sellers, facilitating a smooth procurement process</li>
+          <li>Addressing customer queries and concerns</li>
+          <li>Procuring the cars from customers (from sellers to the store), and solving any operational challenges that may arise</li>
+          <li>Providing insight and feedback to the Spinny team to facilitate continuous improvement</li>
+          <li>Securely maintaining the procured car and its documents throughout the process and submit nearby Spinny Hub</li>
+      </ul>
+      <h3>Requirements:</h3>
+      <ul>
+          <li>College graduate Any Stream</li>
+          <li>Good verbal communication skills English and Regional language (Kannada/ Marathi/ Telugu/ Malayalam)</li>
+          <li>Drivers License</li>
+      </ul>
+      <p>Interested candidates can reach out at <a href="mailto:riya.mehta@spinny.com">riya.mehta.com</a> or 9257678903 - Riya Mehta and <a href="mailto:harman.kaur@spinny.com">harman.kaurspinny.com</a> or 9540446654 - Harman Kaur</p>
+      <div class="footer">
+          <p><strong>Role:</strong> Service Delivery - Other</p>
+          <p><strong>Industry Type:</strong> Automobile (Automobile Dealers)</p>
+          <p><strong>Department:</strong> Customer Success, Service & Operations</p>
+          <p><strong>Employment Type:</strong> Full Time, Permanent</p>
+          <p><strong>Role Category:</strong> Service Delivery</p>
+          <p><strong>Education:</strong> UG: Any Graduate</p>
+          <p><strong>Key Skills:</strong> Driving, Service Delivery Management, Drives, Customer Satisfaction, Driver, Customer Service Delivery, BMW, Honda, Delivery Management, Four Wheeler, Vehicle, Riding, Customer Experience, Delivery, Maruti Suzuki, Tata</p>
+      </div>
+  </div>
+</div>

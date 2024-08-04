@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  gap: 10px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.advertisement {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.advertisement img {
+  max-width: 100%;
+  height: auto;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.filters button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #e0e0e0;
+}
+
+.companies {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.companies h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.company-name{
+  display: flex;
+  justify-content: space-around;
+}
+.comapnay-img{
+  display: flex;
+  justify-content: space-between;
+}
+.company-category {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.company-category h3 {
+  margin: 0;
+}
+
+.company-category p {
+  margin: 5px 0 0 0;
+  color: #777;
+}

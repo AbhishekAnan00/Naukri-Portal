@@ -1,0 +1,79 @@
+<form class="form">
+  <div>
+    <h3>Create New Job Post</h3>
+  </div>
+  <div>
+    <div class="formContain">
+      <div>
+        <div>
+        <label for="CategoryId">Job Category:</label>
+        <select [(ngModel)]="createNewJobObj.CategoryId"
+        [ngModelOptions]="{ standalone: true }"
+        required name="CategoryId" >
+          <option value="" selected>select job category</option>
+          <option *ngFor="let category of categoriesList" [value]="category.jobCategoryId">{{category.categoryName}}</option>
+        </select>
+        </div>
+        
+        <label for="jobTitle">Job Title:</label>
+        <input
+          type="text"
+          required
+        />
+
+        <label for="employerId">Employer ID:</label>
+        <input
+          type="number"
+          [(ngModel)]="createNewJobObj.EmployerId"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+
+        <label for="JobName">Job Name:</label>
+        <input
+          type="text"
+          [(ngModel)]="createNewJobObj.JobName"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+
+       
+      </div>
+      <div>
+       
+       <div>
+        <label for="Experience">Experience:</label>
+        <select type="tel"
+        [(ngModel)]="createNewJobObj.Experience"
+        [ngModelOptions]="{ standalone: true }"
+        required >
+          <option value="fresher">Fresher</option>
+          <option value="experience">Experience</option>
+        </select>
+       </div>
+        <label for="Package">Package:</label>
+        <input
+          type="tel"
+          [(ngModel)]="createNewJobObj.Package"
+          [ngModelOptions]="{ standalone: true }"
+        />
+
+        <label for="Location">Location:</label>
+        <input
+          [(ngModel)]="createNewJobObj.Location"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+
+        <label for="JobDescription">JobDescription:</label>
+        <input
+          type="text"
+          [(ngModel)]="createNewJobObj.JobDescription"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+    </div>
+  </div> 
+  <button type="submit" (click)="createJob(createJob)">Create Job</button>
+</form>

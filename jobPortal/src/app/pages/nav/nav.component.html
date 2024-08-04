@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="logo">
+    <img routerLink="/Home" routerLinkActive="active" src="https://static.naukimg.com/s/0/0/i/naukri-identity/naukri_gnb_logo.svg" alt="Naukri.Com">
+  </div>
+  <ul class="nav-links active">
+    <li><a routerLink="/jobs" routerLinkActive="active">Jobs</a></li>
+    <li><a routerLink="/jobListing" routerLinkActive="active">Companies</a></li>
+    <li><a routerLink="/newJob" routerLinkActive="active">Services</a></li>
+    <!-- <li><a routerLink="/newJob" routerLinkActive="active" *ngIf="userInfo.userRole == 'Employer'">Create New Job</a></li> -->
+  </ul>
+  <div class="nav-buttons">
+    <button routerLink="/login" routerLinkActive="active" class="btn btn-login" *ngIf="!isLoggedIn">Login</button>
+    <button routerLink="/register" routerLinkActive="active" class="btn btn-register" *ngIf="!isLoggedIn">Register</button>
+    {{userInfo.UserName}}
+    <button type="submit" *ngIf="isLoggedIn" class="btn btn-register">Logout</button>
+  </div>
+</nav>

@@ -1,0 +1,155 @@
+<div class="container">
+  <h2>Employer Registration Form</h2>
+  <div class="col-12">
+    <div class="btn-group">
+      <button
+        (click)="isJobSeeker = true"
+        type="button"
+        class="btn"
+        [ngClass]="isJobSeeker ? 'btn-primary' : 'btn-success'"
+      >
+        Are you a Job Seeker
+      </button>
+
+      <button
+        (click)="isJobSeeker = false"
+        type="button"
+        [ngClass]="!isJobSeeker ? 'btn-primary' : 'btn-success'"
+      >
+        Register As An Employer
+      </button>
+    </div>
+  </div>
+  <form>
+    <div *ngIf="!isJobSeeker">
+      <label for="employerId">Employer ID:</label>
+      <input
+        type="number"
+        [(ngModel)]="employeeObj.EmployerId"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="companyName">Company Name:</label>
+      <input
+        type="text"
+        [(ngModel)]="employeeObj.CompanyName"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="emailId">Email ID:</label>
+      <input
+        type="email"
+        [(ngModel)]="employeeObj.EmailId"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="mobileNo">Mobile No:</label>
+      <input
+        type="tel"
+        [(ngModel)]="employeeObj.MobileNo"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="phoneNo">Phone No:</label>
+      <input
+        type="tel"
+        [(ngModel)]="employeeObj.PhoneNo"
+        [ngModelOptions]="{ standalone: true }"
+      />
+
+      <label for="companyAddress">Company Address:</label>
+      <textarea
+        [(ngModel)]="employeeObj.CompanyAddress"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      ></textarea>
+
+      <label for="city">City:</label>
+      <input
+        type="text"
+        [(ngModel)]="employeeObj.City"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="state">State:</label>
+      <input
+        type="text"
+        [(ngModel)]="employeeObj.State"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="pinCode">Pin Code:</label>
+      <input
+        type="text"
+        [(ngModel)]="employeeObj.PinCode"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="logoURL">Logo URL:</label>
+      <input
+        type="url"
+        [(ngModel)]="employeeObj.LogoURL"
+        [ngModelOptions]="{ standalone: true }"
+      />
+
+      <label for="gstNo">GST No:</label>
+      <input
+        type="text"
+        [(ngModel)]="employeeObj.GstNo"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <button type="submit" (click)="register()">Register</button>
+    </div>
+    <div *ngIf="isJobSeeker">
+      <label for="FullName">FullName:</label>
+      <input
+        type="text"
+        [(ngModel)]="fresherObj.FullName"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="emailId">Email ID:</label>
+      <input
+        type="email"
+        [(ngModel)]="fresherObj.EmailId"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <label for="MobileNo">Mobile No:</label>
+      <input
+        type="tel"
+        [(ngModel)]="fresherObj.MobileNo"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <select name="ExperienceStatus" [(ngModel)]="fresherObj.ExperienceStatus">
+        <option value="" selected disabled>Select Experience</option>
+        <option value="Fresher">Fresher</option>
+        <option value="Experience">Experienced</option>
+      </select>
+      <label for="expStatus">Experience Status:</label>
+
+      <label for="ResumeUrl">ResumeUrl:</label>
+      <input
+        type="text"
+        [(ngModel)]="fresherObj.ResumeUrl"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+
+      <button type="submit" (click)="registerAsJobSeeker()">Register</button>
+    </div>
+  </form>
+</div>

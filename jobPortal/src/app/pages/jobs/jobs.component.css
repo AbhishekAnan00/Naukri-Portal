@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.install-button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recommendations {
+  padding: 20px;
+}
+
+.recommendations h2 {
+  margin-top: 0;
+}
+
+.job-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin-top: 0;
+}
+
+.advertisement {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.advertisement img {
+  max-width: 100%;
+  height: auto;
+}
+
+.feedback {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  background-color: #0056b3;
+}
